@@ -9,6 +9,9 @@ const productRoute = require("./routes/products");
 require("express-async-errors");
 app.use(express.json());
 app.use("/api/v1/products/", productRoute);
+app.get("/", (req, res) => {
+	res.status(200).send("Welcome to my api");
+});
 app.use(notFound);
 app.use(errorHandler);
 
