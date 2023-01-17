@@ -5,12 +5,12 @@ const app = express();
 const url = process.env.MONGODB_URI || 3000;
 const notFound = require("./middleware/not-found");
 const errorHandler = require("./middleware/error-handler");
+const productRoute = require("./routes/products");
+require("express-async-errors");
 app.use(express.json());
-
+app.use("/api/v1/products/", productRoute);
 app.use(notFound);
 app.use(errorHandler);
-
-app.use("/api/v1/products", )
 
 connect(url).then(() => {
 	app.listen(3000, () => {
