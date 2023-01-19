@@ -213,7 +213,10 @@ json
 - Route: `/api/v1/products/:id`
 - Method: `GET`
 
+**RESPONSE**
+
 ```
+
 json
 {
   "product":
@@ -230,7 +233,7 @@ json
   }
 ```
 
-> ### GET PRODUCTS USING DIFFERENT QUERIES
+ ### GET PRODUCTS USING DIFFERENT QUERIES
 
 - Route: `/api/v1/products/?`
 - Method: `GET`
